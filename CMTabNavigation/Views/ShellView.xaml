@@ -30,7 +30,7 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding DisplayName}" />
                             <Button Content="X"  
-                                cal:Message.Attach="DeactivateItem($dataContext, 'true')" />
+                                cal:Message.Attach="DeactivateItemAndTryClose($dataContext, 'true')" />
 
                         </StackPanel>
 

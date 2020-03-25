@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace CMTabNav.ViewModels
 {
@@ -33,6 +34,11 @@ namespace CMTabNav.ViewModels
             DisplayName = "Demo View";
         }
 
+        public async Task DeactivateItemAndTryClose(IScreen item, bool close)
+        {
+            await DeactivateItemAsync(item, close, new CancellationToken());
+            
+        }
 
 
     }
