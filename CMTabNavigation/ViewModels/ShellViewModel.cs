@@ -16,25 +16,22 @@ namespace CMTabNav.ViewModels
 
         public void PartsList()
         {
-            //ActivateItemAsync(IoC.Get<PartsListViewModel>(), new CancellationToken()
-            //{ DisplayName = "Part List" });
-
+            //var partsListViewModel = IoC.Get<PartsListViewModel>();
+            //partsListViewModel.DisplayName = "Part List";
             ActivateItemAsync(IoC.Get<PartsListViewModel>(), new CancellationToken());
-             DisplayName = "Part List";
-
         }
         public void AssembliesList() //AssembliesList
         {
             ActivateItemAsync(IoC.Get<AssembliesListViewModel>(), new CancellationToken());
-            DisplayName = "Assembly List";
+            
         }
         public void Demo()
         {
             ActivateItemAsync(IoC.Get<DemoViewModel>(), new CancellationToken());
-            DisplayName = "Demo View";
+            
         }
 
-        public async Task DeactivateItemAndTryClose(IScreen item, bool close)
+        public async Task DeactivateItemAndTryClose(PropertyChangedBase item, bool close)
         {
             await DeactivateItemAsync(item, close, new CancellationToken());
             

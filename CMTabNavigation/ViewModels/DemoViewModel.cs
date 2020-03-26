@@ -5,7 +5,8 @@ using System.Text;
 
 namespace CMTabNav.ViewModels
 {
-    public class DemoViewModel : Screen
+    public class DemoViewModel : PropertyChangedBase, IHaveDisplayName //Screen
     {
+        public string DisplayName { get; set; } = "Demo";
     }
 }

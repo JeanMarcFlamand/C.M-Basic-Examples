@@ -28,9 +28,11 @@
                 <TabControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding DisplayName}" />
-                            <Button Content="X"  
-                                cal:Message.Attach="DeactivateItemAndTryClose($dataContext, 'true')" />
+                            <TextBlock Text="{Binding DisplayName}" Margin="0 0 2 0" />
+                            <Button
+                                cal:Message.Attach="DeactivateItemAndTryClose($dataContext, 'true')" Background="Blue">
+                                <Path Data="M1,9 L9,1 M1,1 L9,9" Stretch="Uniform" Stroke="White" StrokeThickness="3" />
+                            </Button>
 
                         </StackPanel>
 
